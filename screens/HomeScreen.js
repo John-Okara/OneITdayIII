@@ -9,8 +9,8 @@ function HomeScreen({ navigation }) {
       <Image style={styles.cali} source={require("../assets/Cali.png")} />
       <View style={styles.buttons}>
         <Button title="Info" onPress={() => navigation.navigate("Info")} />
-        <Button title="Game" onPress={() => navigation.navigate("Game")} />
         <Button title="Agenda" onPress={() => navigation.navigate("Agenda")} />
+        <Button title="Game" onPress={() => navigation.navigate("Game")} />
       </View>
     </View>
   );
