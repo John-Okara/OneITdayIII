@@ -33,8 +33,8 @@ const styles = StyleSheet.create({
     rowGap: 10,
   },
   cali: {
-    width: 120,
-    height: 120,
+    width: 150,
+    height: 150,
     marginTop: 110,
     marginBottom: 50,
     marginLeft: 200,
