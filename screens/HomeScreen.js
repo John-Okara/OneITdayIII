@@ -28,13 +28,13 @@ const styles = StyleSheet.create({
   buttons: {
     flex: 1,
     backgroundColor: "#000066",
-    marginTop: 50,
+    marginTop: 40,
     width: "50%",
     rowGap: 10,
   },
   cali: {
-    width: 150,
-    height: 150,
+    width: 180,
+    height: 180,
     marginTop: 110,
     marginBottom: 50,
     marginLeft: 200,
