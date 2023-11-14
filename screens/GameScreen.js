@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
 import { useState, useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import Realm from "realm";
 
@@ -27,6 +28,9 @@ const AdventureScreen = () => {
     const nextScene = await getSceneData(leadsTo);
     setCurrentScene(nextScene);
     setCurrentSceneId(leadsTo);
+
+    // Store the current scene ID in AsyncStorage
+    await AsyncStorage.setItem("currentSceneId", leadsTo);
   };
 
   useEffect(() => {

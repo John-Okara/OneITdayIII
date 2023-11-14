@@ -6,7 +6,7 @@ function HomeScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Text style={styles.wellcome}>Wellcome to One-IT Day</Text>
-      <Image style={styles.cali} source={require("../assets/Cali.png")} />
+      <Image style={styles.cali} source={require("../assets/Cali2.png")} />
       <View style={styles.buttons}>
         <Button title="Info" onPress={() => navigation.navigate("Info")} />
         <Button title="Agenda" onPress={() => navigation.navigate("Agenda")} />
@@ -28,16 +28,16 @@ const styles = StyleSheet.create({
   buttons: {
     flex: 1,
     backgroundColor: "#000066",
-    marginTop: 40,
+    marginTop: 0,
     width: "50%",
     rowGap: 10,
   },
   cali: {
-    width: 180,
-    height: 180,
-    marginTop: 110,
-    marginBottom: 50,
-    marginLeft: 200,
+    width: 200,
+    height: 200,
+    resizeMode: "contain",
+    marginTop: 70,
+    marginBottom: 1,
   },
   wellcome: {
     marginTop: 50,

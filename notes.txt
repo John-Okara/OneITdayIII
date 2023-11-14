@@ -1,0 +1,11 @@
+Questions:
+
+Why do I need a dev build for using Realm?
+
+------------------------------------------
+Next Steps:
+
+Database
+Game Storage
+    npm i @react-native-async-storage/async-storage
+        After install, rebuild the dev
