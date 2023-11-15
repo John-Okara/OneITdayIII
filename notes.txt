@@ -26,3 +26,8 @@ Database
 Game Storage
     npm i @react-native-async-storage/async-storage
         After install, rebuild the dev
+------------------------------------------
+
+Für Dokumentation/ Präsentation
+
+- Focus auf die Folgeprojekte legen
