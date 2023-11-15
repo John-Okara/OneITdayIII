@@ -1,6 +1,23 @@
-Questions:
+Fragen:
 
-Why do I need a dev build for using Realm?
+P1:
+Wie soll die Agenda gestalltet werden?
+    -> Siehe Entwürfe in Figma
+Wie soll die Infoseite aussehen?
+
+Welche Game Variante wird bevorzugt?
+    -> Statisch (2 Dialogoptionen) - Level 1
+    -> Quiz/ Rätsel Form (4 Antwortmöglichkeiten) - Level 2
+        * Datenbankstruktur wird etwas aufwendinger
+        * werde Hilfe bei den Fragen brauchen
+    -> Integriertes Würfelspiel im Pen & Paper Stil - Level 3
+        * Wird verzwickt
+        * Muss ich erst an Dummys testen, wie das funktionieren würde
+
+P2:
+Wieso brauch ich einen dev buil für Realm?
+Wie kommt die App unter die Leute?
+
 
 ------------------------------------------
 Next Steps:
