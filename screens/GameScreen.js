@@ -2,7 +2,6 @@ import React from "react";
 import { View, Text, Button } from "react-native";
 import { useState, useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useNavigation } from "@react-navigation/native";
 import Realm from "realm";
 
 //get the Atlas App ID (found in Atlas Browser)
@@ -13,8 +12,8 @@ const AdventureScreen = () => {
   const [currentSceneId, setCurrentSceneId] = useState("scene1");
   const [currentScene, setCurrentScene] = useState(null);
 
+  // Fetch scene data from the database based on the sceneId
   const getSceneData = async (sceneId) => {
-    // Fetch scene data from the database based on the sceneId
     const user = await app.logIn(Realm.Credentials.anonymous());
     const mongodb = user.mongoClient("mongodb-atlas");
     const database = mongodb.db("OneITDay");
