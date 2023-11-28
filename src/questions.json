@@ -1,0 +1,265 @@
+[
+    {
+      "_id": "scene0",
+      "text": "What does IT stand for at Haufe Group?",
+      "options": [
+        {"text": "Inner-earth tectonics", "leadsTo": "scene1"},
+        {"text": "Information Technology", "leadsTo": "scene2"},
+        {"text": "Intergalactic Terretory", "leadsTo": "scene1"},
+        {"text": "Inverted terra-byte storage", "leadsTo": "scene1"}
+      ]
+    },
+    {
+      "_id": "scene1",
+      "text": "Wrong Answer Try again?",
+      "options": [
+        {"text": "Try again", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene2",
+      "text": "How many areas are there in the IT?",
+      "options": [
+        {"text": " 4", "leadsTo": "scene4"},
+        {"text": " 3", "leadsTo": "scene3"},
+        {"text": " 6", "leadsTo": "scene3"},
+        {"text": " 5", "leadsTo": "scene3"}
+      ]
+    },
+    {
+        "_id": "scene3",
+        "text": "Wrong Answer Try again??",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene4",
+        "text": "What is the name of the Platform that powers our IT ticket system?",
+        "options": [
+          {"text": "SER Rechnungssystem 1", "leadsTo": "scene5"},
+          {"text": "SAP 2", "leadsTo": "scene5"},
+          {"text": "Office 3", "leadsTo": "scene5"},
+          {"text": "Service Now 3", "leadsTo": "scene6"}
+        ]
+      },
+      {
+        "_id": "scene5",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene6",
+        "text": "What are the names of the teams, who make up the “Enterprise IT” Area?",
+        "options": [
+          {"text": "SAP ERP / Sales & Service applications", "leadsTo": "scene7"},
+          {"text": "Product Data & Integration / DevOps Services", "leadsTo": "scene7"},
+          {"text": "Digital Enterprise Services / S4 HANA", "leadsTo": "scene7"},
+          {"text": "Infrastructure / Workplace", "leadsTo": "scene8"}
+        ]
+      },
+      {
+        "_id": "scene7",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene8",
+        "text": "Who are IT's strategic partners?",
+        "options": [
+          {"text": "Coca-Cola / MongoDB 1", "leadsTo": "scene9"},
+          {"text": "AWS / Microsoft 2", "leadsTo": "scene9"},
+          {"text": "Arvato / Noris 3", "leadsTo": "scene10"},
+          {"text": "Oracle / Salesforce 3", "leadsTo": "scene9"}
+        ]
+      },
+      {
+        "_id": "scene9",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene10",
+        "text": "Which system does our customer success specialists and sales staff use for their day today CRM and sales tasks?",
+        "options": [
+          {"text": "Dropbox", "leadsTo": "scene11"},
+          {"text": "Microsoft Planner", "leadsTo": "scene11"},
+          {"text": "MIWH", "leadsTo": "scene11"},
+          {"text": "Salesforce", "leadsTo": "scene12"}
+        ]
+      },
+      {
+        "_id": "scene11",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene12",
+        "text": "What is the name for software applications and systems in our ﬁnancial planning?",
+        "options": [
+          {"text": "Aufträge or statements of work", "leadsTo": "scene13"},
+          {"text": "Risk plugs", "leadsTo": "scene13"},
+          {"text": "Dienstleistern or service providers", "leadsTo": "scene13"},
+          {"text": "Assets", "leadsTo": "scene14"}
+        ]
+      },
+      {
+        "_id": "scene13",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene14",
+        "text": "What is the name of our new, highly-usable VPN client software?",
+        "options": [
+          {"text": "Campari 1", "leadsTo": "scene15"},
+          {"text": "Ivanti 2", "leadsTo": "scene16"},
+          {"text": "Fiori 3", "leadsTo": "scene15"},
+          {"text": "Ashanti 3", "leadsTo": "scene15"}
+        ]
+      },
+      {
+        "_id": "scene15",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene16",
+        "text": "How Big is IT's budget for ﬁscal year 23?",
+        "options": [
+          {"text": "34 Million", "leadsTo": "scene17"},
+          {"text": "100 Million", "leadsTo": "scene17"},
+          {"text": "28 Million", "leadsTo": "scene18"},
+          {"text": "70 Million", "leadsTo": "scene17"}
+        ]
+      },
+      {
+        "_id": "scene17",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene18",
+        "text": "What is the name of the famous database used to support our Marketing that is managed by Integration area?",
+        "options": [
+          {"text": "MIWH", "leadsTo": "scene20"},
+          {"text": "Eloqua", "leadsTo": "scene19"},
+          {"text": "Pega", "leadsTo": "scene19"},
+          {"text": "Pega", "leadsTo": "scene19"}
+        ]
+      },
+      {
+        "_id": "scene19",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene20",
+        "text": "How many tickets did Team Workplace handle in Fiscal Year 2022?",
+        "options": [
+          {"text": "ca. 3.000", "leadsTo": "scene21"},
+          {"text": "ca 300.000", "leadsTo": "scene21"},
+          {"text": "ca 50.000", "leadsTo": "scene21"},
+          {"text": "ca. 25.000", "leadsTo": "scene22"}
+        ]
+      },
+      {
+        "_id": "scene21",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene22",
+        "text": "How many people including students and Azubies are working for IT?",
+        "options": [
+          {"text": "115", "leadsTo": "scene23"},
+          {"text": "220", "leadsTo": "scene23"},
+          {"text": "450", "leadsTo": "scene23"},
+          {"text": "140", "leadsTo": "scene24"}
+        ]
+      },
+      {
+        "_id": "scene23",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene24",
+        "text": "What kind of project is the PAM project?",
+        "options": [
+          {"text": "Access management project", "leadsTo": "scene26"},
+          {"text": "Cooking project", "leadsTo": "scene25"},
+          {"text": "Network project", "leadsTo": "scene25"},
+          {"text": "Security project", "leadsTo": "scene26"}
+        ]
+      },
+      {
+        "_id": "scene25",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene26",
+        "text": "Bonus round: When we compare doing tasks automated and doing them manual, what are disadvantages of manual actions? 2?",
+        "options": [
+          {"text": "Hard to trace", "leadsTo": "scene28"},
+          {"text": "Pressing buttons", "leadsTo": "scene27"},
+          {"text": "Hard to secure", "leadsTo": "scene28"},
+          {"text": "Error prone", "leadsTo": "scene28"}
+        ]
+      },
+      {
+        "_id": "scene27",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene28",
+        "text": "Bonus Questions: The metaverse as deﬁned by Info-Tech Research Group is a convergence of four main technologies. The four technologies are mixed reality, immersive digital space, and?",
+        "options": [
+          {"text": "Positive animal attraction", "leadsTo": "scene29"},
+          {"text": "Generative neural networks", "leadsTo": "scene29"},
+          {"text": "Artiﬁcial intelligence", "leadsTo": "scene30"},
+          {"text": "Real-time interaction", "leadsTo": "scene30"}
+        ]
+      },
+      {
+        "_id": "scene29",
+        "text": "Wrong Answer Try again",
+        "options": [
+          {"text": "Try again", "leadsTo": "scene4"}
+        ]
+      },
+      {
+        "_id": "scene30",
+        "text": "YOU DID IT!",
+        "options": [
+          {"text": "Start Again", "leadsTo": "scene0"}
+        ]
+      }
+  ]
+  
