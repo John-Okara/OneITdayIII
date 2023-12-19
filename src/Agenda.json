@@ -1,0 +1,80 @@
+[
+    {
+      "_id": "scene0",
+      "text": "Breakouts\n choose the breakout session that you want to work on most:",
+      "options": [
+        {"text": "SAP", "leadsTo": "scene1"},
+        {"text": "Architecture principles", "leadsTo": "scene2"},
+        {"text": "What occurs when you lack a test plan?", "leadsTo": "scene3"},
+        {"text": "Digital Quality Guide", "leadsTo": "scene4"},
+        {"text": "Fututre learning", "leadsTo": "scene5"},
+        {"text": "Introduction to AWS WAF ", "leadsTo": "scene6"},
+        {"text": "Anatomy of AWS EKS", "leadsTo": "scene7"}
+      ]
+    },
+    {
+      "_id": "scene1",
+      "head": "Discover the fascinating world of programming in the SAP universe.",
+      "descr": "In our interactive one-hour workshop, you'll playfully dive into the many types of program-ming that SAP has to offer and unleash your inner SAP development genius! Thoralf Hänsel, Eduardo de Andrade, Larissa Bleier, Walter Maier",
+      "where": "Room 10.1.A1.02",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene2",
+      "head": "Architecture principles and design patterns in action (Gamified).",
+      "descr": "Robustness, Onion Layers, Circuit Breakers are application design principles, that  can be hard-to-understand, abstract concepts. Experience architecture principles applied to real world scenarios to understand why you want to use them in your IT solutions. Holger Neub and Product Integration Team.",
+      "where": "Room Feldberg 10.1.A1.01 ",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene3",
+      "head": "What occurs when you lack a test plan?",
+      "descr": "Do tests truly adhere to requirement specifications? Absolutely! In this session, we aim to demonstrate how to construct a test strategy, identify its purpose, and set objectives. We'll also cover how to design a test, highlight essential test criteria, and, importantly, how to document test results. Larissa Wissman and Michaela Baron.",
+      "where": "Room 11.2.22 ",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene4",
+      "head": "Future learning based on metaverse.",
+      "descr": "Learn how to build the metaverse by creating a holographic-based digital twin to enhance the digital learning experience. Leon Fleig.",
+      "where": "Auditorium Building 7",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene5",
+      "head": "Introduction to AWS WAF",
+      "descr": "Learn how IT uses the AWS WAF cloud service to block denial of service attacks at the Hau-fe Shop. Lucian Patian.",
+      "where": "Room 5.3.104",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene6",
+      "head": "Anatomy of AWS EKS (Elastic Kubernetes Service) at different dimensions",
+      "descr": "In this session we analyze the popular EKS cloud service, based on different aspects of the service. For aspects like security, costs, and maintainability, we will deep dive to identify all the benefits of running Kubernetes as a managed service. Cristian Pirtea.",
+      "where": "Room 11.0.03 ",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    },
+    {
+      "_id": "scene7",
+      "head": "Digital Quality Guide",
+      "descr": "How to assess processes, rate and optimize them. Bring your process! You can do it live with our support. Patrick Hirt, Christina Steurer.",
+      "where": "Room 11.8.30",
+      "options": [
+        {"text": "Back to Overview", "leadsTo": "scene0"}
+      ]
+    }
+    
+  ]
+  

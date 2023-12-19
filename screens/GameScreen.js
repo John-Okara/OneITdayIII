@@ -45,6 +45,7 @@ const AdventureScreen = () => {
         <React.Fragment>
           <Image style={styles.cali} source={require("../assets/Cali2.png")} />
           <Text style={styles.text}>{currentScene.text}</Text>
+
           {currentScene.options.map((option) => (
             <View key={option.text} style={styles.buttons}>
               <Button
@@ -87,5 +88,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 25,
     color: "white",
+  },
+  caliContatainer: {
+    position: "absolute",
   },
 });

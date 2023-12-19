@@ -1,74 +1,98 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet, Image } from "react-native";
+import { useState, useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import Realm from "realm";
 
-function AgendaScreen() {
+//get the Atlas App ID (found in Atlas Browser)
+//https://realm.mongodb.com/groups/6549f6428728c1322adb3bfe/apps/6549fbf2e47b2153494e8558/deployment/environment
+const app = new Realm.App({ id: "application-0-fqyig" });
+
+const AdventureScreen = () => {
+  const [currentSceneId, setCurrentSceneId] = useState("scene1");
+  const [currentScene, setCurrentScene] = useState(null);
+
+  // Fetch scene data from the database based on the sceneId
+  const getSceneData = async (sceneId) => {
+    const user = await app.logIn(Realm.Credentials.anonymous());
+    const mongodb = user.mongoClient("mongodb-atlas");
+    const database = mongodb.db("One-ITDay");
+    const collection = database.collection("Agenda");
+
+    const sceneData = await collection.findOne({ _id: sceneId });
+    return sceneData;
+  };
+
+  const handleOptionSelect = async (leadsTo) => {
+    const nextScene = await getSceneData(leadsTo);
+    setCurrentScene(nextScene);
+    setCurrentSceneId(leadsTo);
+
+    // Store the current scene ID in AsyncStorage
+    await AsyncStorage.setItem("currentSceneId", leadsTo);
+  };
+
+  useEffect(() => {
+    const initialSceneId = "scene0";
+    getSceneData(initialSceneId).then((initialScene) => {
+      setCurrentScene(initialScene);
+    });
+  }, []);
+
+  // head = headline
+  // descr = description
+  // where = Room
   return (
-    <View style={styles.backround}>
-      <View style={styles.table}>
-        <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Header 1</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Header 2</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Header 3</Text>
-          </View>
-        </View>
-        <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 1, Cell 1</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 1, Cell 2</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 1, Cell 3</Text>
-          </View>
-        </View>
-        <View style={styles.row}>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 2, Cell 1</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 2, Cell 2</Text>
-          </View>
-          <View style={styles.cell}>
-            <Text style={styles.cellText}>Row 2, Cell 3</Text>
-          </View>
-        </View>
-        {/* Add more rows and cells as needed */}
-      </View>
+    <View style={styles.container}>
+      {currentScene && (
+        <React.Fragment>
+          <Text style={styles.text}>{currentScene.head}</Text>
+          <Text style={styles.text}>{currentScene.descr}</Text>
+          <Text style={styles.text}>{currentScene.where}</Text>
+          {currentScene.options.map((option) => (
+            <View key={option.text} style={styles.buttons}>
+              <Button
+                title={option.text}
+                onPress={() => handleOptionSelect(option.leadsTo)}
+              />
+            </View>
+          ))}
+        </React.Fragment>
+      )}
     </View>
   );
-}
+};
+
+export default AdventureScreen;
 
 const styles = StyleSheet.create({
-  table: {
-    flexDirection: "column",
-    borderWidth: 1,
-    borderColor: "#ffffff",
-    borderRadius: 5,
-    margin: 10,
-  },
-  row: {
-    flexDirection: "row",
-  },
-  cell: {
-    flex: 1,
-    borderWidth: 1,
-    borderColor: "#ffffff",
-    padding: 5,
-  },
-  cellText: {
-    textAlign: "center",
-    color: "#66CCFF",
-  },
-  backround: {
+  container: {
     flex: 1,
     backgroundColor: "#000066",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  buttons: {
+    flex: 0,
+    backgroundColor: "#000066",
+    marginTop: 10,
+    width: "50%",
+    rowGap: 10,
+  },
+  cali: {
+    width: 200,
+    height: 200,
+    resizeMode: "contain",
+    marginTop: -200,
+    marginBottom: 1,
+  },
+  text: {
+    marginTop: 0,
+    marginBottom: 20,
+    fontSize: 15,
+    color: "white",
+  },
+  caliContatainer: {
+    position: "absolute",
   },
 });
-
-export default AgendaScreen;
