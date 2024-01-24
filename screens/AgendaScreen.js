@@ -91,6 +91,8 @@ const styles = StyleSheet.create({
     marginBottom: 20,
     fontSize: 15,
     color: "white",
+    marginLeft: 30,
+    marginRight: 30,
   },
   caliContatainer: {
     position: "absolute",
